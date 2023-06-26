@@ -1,0 +1,26 @@
+{
+  "name": "my-parent-lib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/my-parent-lib/src",
+  "projectType": "library",
+  "targets": {
+    "new-build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/my-parent-lib",
+        "main": "libs/my-parent-lib/src/index.ts",
+        "tsConfig": "libs/my-parent-lib/tsconfig.lib.json",
+        "assets": ["libs/my-parent-lib/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/my-parent-lib/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}
