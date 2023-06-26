@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@tscbuild/my-parent-lib": ["libs/my-parent-lib/src/index.ts"],
       "@tscbuild/mylib": ["libs/mylib/src/index.ts"]
     }
   },

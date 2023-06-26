@@ -4,7 +4,7 @@
   "sourceRoot": "libs/mylib/src",
   "projectType": "library",
   "targets": {
-    "katerina": {
+    "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
