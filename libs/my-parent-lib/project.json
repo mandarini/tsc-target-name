@@ -5,6 +5,7 @@
   "projectType": "library",
   "targets": {
     "new-build": {
+      "dependsOn": ["^new-build"],
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {

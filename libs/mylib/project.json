@@ -4,6 +4,14 @@
   "sourceRoot": "libs/mylib/src",
   "projectType": "library",
   "targets": {
+    "new-build": {
+      "dependsOn": ["build"],
+      "command": "echo dummy build",
+      "options": {
+        "outputPath": "dist/libs/mylib",
+        "tsConfig": "libs/mylib/tsconfig.lib.json"
+      }
+    },
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
